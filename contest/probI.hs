@@ -4,7 +4,7 @@
 import Data.Ratio
 
 -- | Given a percentage, return the smallest rational
--- | representation of the percentage with an error of +/- 1%.
+-- representation of the percentage with an error of +/- 1%.
 minRatio :: Integral a => a -> Rational
 -- Sweet, all my work is done for me.
 minRatio = flip approxRational (1 % 100) . (%100)
